@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>currency_mainpage</class>
+ <widget class="QWidget" name="currency_mainpage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>667</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font-family: &quot;Calibri Light&quot;
+}
+
+QComboBox {
+	font-size: 18px;
+}
+
+QLabel[objectName=&quot;input_price_label&quot;] {
+	font-size: 48px;
+	font-weight: bold;
+	background-color: rgb(243, 243, 243);
+}
+
+QLabel[objectName=&quot;intro_labels&quot;] {
+	font-size: 24px
+}
+
+QLabel[objectName=&quot;insertBudget_label&quot;] {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+QPushButton[objectName=&quot;customize_button&quot;] {
+	font-size: 18px;
+	background-color: rgb(243, 243, 243);
+	color: rgb(0, 0, 127);
+	border: none;
+}
+
+QGroupBox[objectName=&quot;conversion_one_groupbox&quot;],
+QGroupBox[objectName=&quot;conversion_three_groupbox&quot;],
+QGroupBox[objectName=&quot;conversion_five_groupbox&quot;],
+QGroupBox[objectName=&quot;conversion_seven_groupbox&quot;],
+QGroupBox[objectName=&quot;selection_one&quot;],
+QGroupBox[objectName=&quot;selection_three&quot;],
+QGroupBox[objectName=&quot;selection_five&quot;],
+QGroupBox[objectName=&quot;selection_seven&quot;] {
+	background-color: rgb(243, 243, 243);
+    border: none;
+}
+
+QGroupBox[objectName=&quot;conversion_two_groupbox&quot;],
+QGroupBox[objectName=&quot;conversion_four_groupbox&quot;],
+QGroupBox[objectName=&quot;conversion_six_groupbox&quot;],
+QGroupBox[objectName=&quot;conversion_eight_groupbox&quot;],
+QGroupBox[objectName=&quot;selection_two&quot;],
+QGroupBox[objectName=&quot;selection_four&quot;],
+QGroupBox[objectName=&quot;selection_six&quot;],
+QGroupBox[objectName=&quot;selection_eight&quot;] {
+	font-size: 22px;
+	color: rgb(0, 0, 127);
+    border: none;
+}
+
+QLabel[objectName=&quot;currency_label_one&quot;],
+QLabel[objectName=&quot;currency_label_two&quot;],
+QLabel[objectName=&quot;currency_label_three&quot;],
+QLabel[objectName=&quot;currency_label_four&quot;] ,
+QLabel[objectName=&quot;currency_label_five&quot;],
+QLabel[objectName=&quot;currency_label_six&quot;],
+QLabel[objectName=&quot;currency_label_seven&quot;],
+QLabel[objectName=&quot;currency_label_eight&quot;] {
+	color: rgb(0, 0, 127);
+	padding-left: 32px;
+	font-size: 22px;
+}
+
+QLabel[objectName=&quot;currency_conversion_label_one&quot;],
+QLabel[objectName=&quot;currency_conversion_label_two&quot;],
+QLabel[objectName=&quot;currency_conversion_label_three&quot;],
+QLabel[objectName=&quot;currency_conversion_label_four&quot;],
+QLabel[objectName=&quot;currency_conversion_label_five&quot;],
+QLabel[objectName=&quot;currency_conversion_label_six&quot;],
+QLabel[objectName=&quot;currency_conversion_label_seven&quot;],
+QLabel[objectName=&quot;currency_conversion_label_eight&quot;] {
+	color: rgb(0, 0, 127);
+	/*padding-left: 89px;*/
+	font-size: 22px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QComboBox" name="switch_currency_label"/>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="insertBudget_label">
+       <property name="text">
+        <string>Insert budget here: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="insertBudget_lineedit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="calculate_button">
+       <property name="text">
+        <string>Calculate</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="input_price_label">
+     <property name="text">
+      <string>181.48</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="intro_labels">
+     <property name="text">
+      <string>Value in other currencies</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="default_page">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="conversion_one_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_one">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GBP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_one">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>150.99</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_two_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_two">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>EUR</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_two">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>173.53</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_three_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_three">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>AUD</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_three">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>95.27</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_four_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_four">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>BTC</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_four">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0.000052</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_five_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_five">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>DOGE</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_five">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>16.88</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_six_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_six">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>ETC</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_six">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0.043</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_seven_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <widget class="QLabel" name="currency_label_seven">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GOLD</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_seven">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0.103622</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="conversion_eight_groupbox">
+         <property name="title">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <widget class="QLabel" name="currency_label_eight">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>SILVER</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="currency_conversion_label_eight">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>0</y>
+            <width>200</width>
+            <height>45</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>9.136029</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="options_page">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="selection_one">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QComboBox" name="selection_combo_one">
+            <property name="currentIndex">
+             <number>-1</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_two">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QComboBox" name="selection_combo_two"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_three">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QComboBox" name="selection_combo_three"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_four">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QComboBox" name="selection_combo_four"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_five">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QComboBox" name="selection_combo_five"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_six">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QComboBox" name="selection_combo_six"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_seven">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QComboBox" name="selection_combo_seven"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="selection_eight">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QComboBox" name="selection_combo_eight"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="customize_button">
+     <property name="text">
+      <string>Customize Currencies</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="copyright_label">
+     <property name="text">
+      <string>Currency Converter by Jono Charles Davey</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

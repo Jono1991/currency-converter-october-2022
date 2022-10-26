@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>currency_converter_frame</class>
+ <widget class="QWidget" name="currency_converter_frame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>470</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font/>
+  </property>
+  <property name="windowTitle">
+   <string>Currency Converter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton[objectName=&quot;signin_page_button&quot;],
+QPushButton[objectName=&quot;register_page_button&quot;] {
+	border: none;
+}
+
+QLabel, QPushButton[objectName=&quot;signin_page_button&quot;],
+QLabel, QPushButton[objectName=&quot;signin_page_button&quot;] {
+	color: rgb(0, 0, 127);
+}
+
+QLineEdit {
+	background-color: rgb(163, 163, 255);
+	color: rgb(255, 255, 255);
+     /* color: rgb(0, 0, 127); */
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+QPushButton[objectName=&quot;signin_button&quot;] {
+    font-weight: bold;
+    color: white;
+	border-radius: 10px;
+	border: none;
+	background-color: qlineargradient(spread:pad, x1:0, y2:1, x1:0, y1:0, stop:0 rgb(120, 121, 255), stop:1 rgb(0, 0, 255));
+}
+
+QPushButton[objectName=&quot;register_button&quot;] {
+    font-weight: bold;
+    color: white;
+	border-radius: 10px;
+	border: none;
+	background-color: qlineargradient(spread:pad, x1:0, y2:1, x1:0, y1:0, stop:0 rgb(129, 0, 0), stop:1 rgb(255, 0, 0));
+}</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>470</width>
+     <height>456</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="signin_page">
+    <widget class="QLabel" name="signin_text">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>46</y>
+       <width>470</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri Light</family>
+       <pointsize>26</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sign in</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="signin_instructions">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>96</y>
+       <width>470</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Enter your details for use of our services....</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="email_entry">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>139</y>
+       <width>306</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Email address</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_entry">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>200</y>
+       <width>306</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signin_button">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>319</y>
+       <width>306</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sign in</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="register_page_button">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>364</y>
+       <width>306</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>I don't have an account!</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="register_page">
+    <widget class="QLabel" name="register_text">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>46</y>
+       <width>470</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri Light</family>
+       <pointsize>26</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="register_instructions">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>96</y>
+       <width>470</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Enter your details for your new account....</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="email_entry_register">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>139</y>
+       <width>306</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Email address</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password_entry_register">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>200</y>
+       <width>306</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="confirm_password_entry">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>261</y>
+       <width>306</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Confirm Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="register_button">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>321</y>
+       <width>306</width>
+       <height>39</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signin_page_button">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>366</y>
+       <width>306</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>I already have an account!</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
